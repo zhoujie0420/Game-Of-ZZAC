@@ -1,5 +1,7 @@
 package com.kob.backend.consumer;
 
+import com.alibaba.fastjson.JSONObject;
+import com.kob.backend.consumer.utils.Game;
 import com.kob.backend.consumer.utils.JwtAuthentication;
 import com.kob.backend.mapper.UserMapper;
 import com.kob.backend.pojo.User;
@@ -11,15 +13,25 @@ import javax.websocket.*;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArraySet;
 
 @Component
 @ServerEndpoint("/websocket/{token}")  // 注意不要以'/'结尾
 public class WebSocketServer {
+
+    private Game game = null;
+
+
     //ConcurrentHashMap 的优势在于兼顾性能和线程安全，一个线程进行写操作时，
     //它会锁住一小部分，其他部分的读写不受影响，其他线程访问没上锁的地方不会被阻塞。
     //(userId,WebSocketServer实例)
-    private static ConcurrentHashMap<Integer,WebSocketServer> users = new ConcurrentHashMap<>();
+    private static  ConcurrentHashMap<Integer,WebSocketServer> users = new ConcurrentHashMap<>();
+
+    // 线程安全的set
+    private static final CopyOnWriteArraySet<User> matchPool = new CopyOnWriteArraySet<>();
+
     private User user; //当前用户
     private Session session = null; //session 维护链接
 
@@ -51,20 +63,69 @@ public class WebSocketServer {
         System.out.println("disconnected");
         if(this.user != null){
             users.remove(this.user.getId());
+            matchPool.remove(this.user);
         }
     }
 
-    @OnMessage
-    public void onMessage(String message, Session session) {
-        // 从Client接收消息
-        System.out.println("receive message");
 
+
+    private void startMatching(){
+        System.out.println("start matching!");
+        matchPool.add(this.user);
+        while(matchPool.size() >= 2) {
+            Iterator<User> it = matchPool.iterator();
+            // 匹配成功
+            User a = it.next(), b = it.next();
+            matchPool.remove(a);
+            matchPool.remove(b);
+
+            Game game = new Game(13, 14, 20);
+            game.createMap();
+
+            // 发送给A的信息
+            JSONObject respA = new JSONObject();
+            respA.put("event", "start-matching");
+            respA.put("opponent_username", b.getUsername());
+            respA.put("opponent_photo", b.getPhoto());
+            respA.put("gamemap", game.getG());
+            // 通过userId取出a的连接，给A发送respA
+            users.get(a.getId()).sendMessage(respA.toJSONString());
+
+            // 发送给B的信息
+            JSONObject respB = new JSONObject();
+            respB.put("event", "start-matching");
+            respB.put("opponent_username", a.getUsername());
+            respB.put("opponent_photo", a.getPhoto());
+            respB.put("gamemap", game.getG());
+            // 通过userId取出b的连接，给B发送respB
+            users.get(b.getId()).sendMessage(respB.toJSONString());
+        }
     }
 
+
+
+    private void stopMatching(){
+        System.out.println("stop matching!");
+        matchPool.remove(this.user);
+    }
+    @OnMessage
+    public void onMessage(String message, Session session) {//当做路由 分配任务
+        // Server从Client接收消息时触发
+        System.out.println("Receive message!");
+        JSONObject data = JSONObject.parseObject(message);//将字符串解析成JSON
+        String event = data.getString("event");
+        if("start-matching".equals(event)){//防止event为空的异常
+            startMatching();
+        } else if ("stop-matching".equals(event)) {
+            stopMatching();
+        }
+    }
     @OnError
     public void onError(Session session, Throwable error) {
         error.printStackTrace();
     }
+
+
 
     public void sendMessage(String message){
         synchronized (this.session){
