@@ -5,69 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d6914e8-9e02-4475-9159-70e0f577ad93" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acapp/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/acapp/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acapp/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/acapp/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acapp/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/acapp/babel.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acapp/jsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/acapp/jsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acapp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/acapp/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acapp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/acapp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acapp/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/acapp/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acapp/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/acapp/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acapp/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/acapp/src/components/HelloWorld.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acapp/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/acapp/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acapp/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/acapp/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acapp/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/acapp/vue.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kob/backend/BackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kob/backend/BackendApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kob/backend/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kob/backend/config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kob/backend/consumer/WebSocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kob/backend/consumer/WebSocketServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kob/backend/controller/user/bot/AddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kob/backend/controller/user/bot/AddController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kob/backend/controller/user/bot/GetListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kob/backend/controller/user/bot/GetListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kob/backend/controller/user/bot/RemoveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kob/backend/controller/user/bot/RemoveController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kob/backend/controller/user/bot/UpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kob/backend/controller/user/bot/UpdateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kob/backend/service/impl/utils/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kob/backend/service/impl/utils/UserDetailsImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kob/backend/utils/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kob/backend/utils/JwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/templates/pk/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/templates/pk/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/kob/backend/BackendApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/kob/backend/BackendApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kob/backend/consumer/utils/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kob/backend/consumer/utils/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/target/classes/com/kob/backend/consumer/WebSocketServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/kob/backend/consumer/WebSocketServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/templates/pk/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/templates/pk/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/web/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/web/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/babel.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/assets/scripts/AcGameObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/assets/scripts/AcGameObject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/assets/scripts/Cell.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/assets/scripts/Cell.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/assets/scripts/GameMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/assets/scripts/GameMap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/assets/scripts/Snake.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/assets/scripts/Snake.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/assets/scripts/Wall.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/assets/scripts/Wall.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/components/ContentField.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/ContentField.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/components/GameMap.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/GameMap.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/components/NavBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/NavBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/components/PlayGround.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/PlayGround.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/store/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/store/pk.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/store/pk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/error/NotFound.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/error/NotFound.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/pk/PkIndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/pk/PkIndexView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/ranklist/RanklistIndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/ranklist/RanklistIndexView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/record/RecordContentView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/record/RecordContentView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/record/RecordIndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/record/RecordIndexView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/user/bot/UserBotIndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/user/bot/UserBotIndexView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vue.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,23 +48,23 @@
     <option name="autoscrollToSource" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "spring.configuration.checksum": "b43fdd98b1fd705ae4c3a10cf25aad8a",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;b43fdd98b1fd705ae4c3a10cf25aad8a&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="backend" />
@@ -137,6 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1665667427125</updated>
       <workItem from="1665667429919" duration="2196000" />
+      <workItem from="1665670215323" duration="4880000" />
     </task>
     <servers />
   </component>
