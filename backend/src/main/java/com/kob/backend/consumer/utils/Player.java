@@ -1,5 +1,5 @@
 
-        package com.kob.backend.consumer.utils;
+package com.kob.backend.consumer.utils;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,6 +23,15 @@ public class Player {
         if(step <= 10) return true;
         return step % 3 == 1;
     }
+
+    public String getStepsString() {
+        StringBuilder res = new StringBuilder();
+        for(int x:steps){
+            res.append(x);
+        }
+        return res.toString();
+    }
+
 
     public List<Cell> getCells() {
         List<Cell> res = new ArrayList<>();

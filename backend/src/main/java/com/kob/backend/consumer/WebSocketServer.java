@@ -3,6 +3,7 @@ package com.kob.backend.consumer;
 import com.alibaba.fastjson.JSONObject;
 import com.kob.backend.consumer.utils.Game;
 import com.kob.backend.consumer.utils.JwtAuthentication;
+import com.kob.backend.mapper.RecordMapper;
 import com.kob.backend.mapper.UserMapper;
 import com.kob.backend.pojo.User;
 import com.kob.backend.utils.JwtUtil;
@@ -33,9 +34,17 @@ public class WebSocketServer {
     private static final CopyOnWriteArraySet<User> matchPool = new CopyOnWriteArraySet<>();
 
     private User user; //当前用户
+
     private Session session = null; //session 维护链接
 
     private static UserMapper userMapper;
+    public static RecordMapper recordMapper;
+
+    @Autowired
+    public void setRecordMapper(RecordMapper recordMapper) {
+        WebSocketServer.recordMapper = recordMapper;
+    }
+
     @Autowired // WebSocket不属于Spring的一个组件，不是单例模式,注入mapper方式有点特殊
     public void setUserMapper(UserMapper userMapper){
         WebSocketServer.userMapper = userMapper;
@@ -169,7 +178,7 @@ public class WebSocketServer {
                 this.session.getBasicRemote().sendText(message);
 
             } catch (IOException e) {
-                 e.printStackTrace();
+                e.printStackTrace();
             }
         }
     }
