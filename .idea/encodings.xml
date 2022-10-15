@@ -3,5 +3,9 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/backend/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/backend/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/backendcloud/backend/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/backendcloud/matchingsystem/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/backendcloud/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/backendcloud/src/main/resources" charset="UTF-8" />
   </component>
 </project>
