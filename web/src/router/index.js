@@ -92,8 +92,7 @@ const router = createRouter({
   history: createWebHistory(),
   routes
 })
-//// to跳转到哪个页面， from表示从哪个页面跳转过去
-// next的表示将页面要不要执行下一步操作，写之前首先要记录每一个未授权界面
+
 router.beforeEach((to, from, next) => {
   if (to.meta.requestAuth && !store.state.user.is_login) {
     next({name: "user_account_login"});

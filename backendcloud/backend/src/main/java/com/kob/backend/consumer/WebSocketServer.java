@@ -47,7 +47,7 @@ public class WebSocketServer {
 
     private Session session = null; //session 维护链接
 
-    private static UserMapper userMapper;
+    public static UserMapper userMapper;
     public static RecordMapper recordMapper;
 
 

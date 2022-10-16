@@ -5,28 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d6914e8-9e02-4475-9159-70e0f577ad93" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/backendcloud/botrunningsystem/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4c0d6bd8-de61-4379-8dc6-a4a62a3790df.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4c0d6bd8-de61-4379-8dc6-a4a62a3790df.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/consumer/WebSocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/consumer/WebSocketServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/consumer/utils/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/consumer/utils/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/consumer/utils/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/consumer/utils/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/controller/pk/StartGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/controller/pk/StartGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/pk/StartGameServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/pk/StartGameServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/pk/StartGameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/pk/StartGameService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/matchingsystem/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/matchingsystem/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/matchingsystem/src/main/java/com/kob/matchingsystem/controller/MatchingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/matchingsystem/src/main/java/com/kob/matchingsystem/controller/MatchingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/matchingsystem/src/main/java/com/kob/matchingsystem/service/MatchingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/matchingsystem/src/main/java/com/kob/matchingsystem/service/MatchingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/matchingsystem/src/main/java/com/kob/matchingsystem/service/impl/MatchingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/matchingsystem/src/main/java/com/kob/matchingsystem/service/impl/MatchingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/matchingsystem/src/main/java/com/kob/matchingsystem/service/impl/utils/MatchingPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/matchingsystem/src/main/java/com/kob/matchingsystem/service/impl/utils/MatchingPool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/matchingsystem/src/main/java/com/kob/matchingsystem/service/impl/utils/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/matchingsystem/src/main/java/com/kob/matchingsystem/service/impl/utils/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/components/MatchGround.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/MatchGround.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/user/bot/AddServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/user/bot/AddServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/assets/scripts/GameMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/assets/scripts/GameMap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/store/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/pk/PkIndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/pk/PkIndexView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/ranklist/RanklistIndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/ranklist/RanklistIndexView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/record/RecordContentView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/record/RecordContentView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/record/RecordIndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/record/RecordIndexView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +185,9 @@
       <workItem from="1665816940912" duration="2499000" />
       <workItem from="1665820859146" duration="14736000" />
       <workItem from="1665892222589" duration="3483000" />
-      <workItem from="1665897500555" duration="738000" />
+      <workItem from="1665897500555" duration="1333000" />
+      <workItem from="1665911269904" duration="1608000" />
+      <workItem from="1665927582401" duration="2199000" />
     </task>
     <servers />
   </component>

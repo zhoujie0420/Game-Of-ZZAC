@@ -64,6 +64,9 @@ public class AddServiceImpl implements AddService {
             return map;
         }
 
+
+
+
         QueryWrapper<Bot> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("user_id",user.getId());
         if(botMapper.selectCount(queryWrapper) >= 10){
