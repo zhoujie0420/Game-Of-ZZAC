@@ -12,6 +12,12 @@ export default {
     getters: {
     },
     mutations: {
+        updatePhoto (state, photo) {
+            state.photo = photo;
+          },
+        updateUsername (state, username) {
+            state.username = username;
+        },
         updateUser(state, user) {
             state.id = user.id;
             state.username = user.username;
