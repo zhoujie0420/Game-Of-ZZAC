@@ -3,18 +3,17 @@ package com.kob.backend.service.impl.pk;
 
 import com.kob.backend.consumer.WebSocketServer;
 import com.kob.backend.consumer.utils.Game;
-import com.kob.backend.service.pk.StartGameService;
 import org.springframework.stereotype.Service;
 
 @Service
 public class GameService {
 
 
-        public String sankeStart(Integer aId, Integer aBotId, Integer bId, Integer bBotId) {
-            System.out.println("start gameL: " + aId + " " + bId);
-            WebSocketServer.startGame(aId, aBotId, bId, bBotId);
-            return "start game success";
-        }
+    public String sankeStart(Integer aId, Integer aBotId, Integer bId, Integer bBotId) {
+        System.out.println("start gameL: " + aId + " " + bId);
+        WebSocketServer.startGame(aId, aBotId, bId, bBotId);
+        return "start game success";
+    }
 
     public String receiveBotMove(Integer userId, Integer direction) {
         System.out.println("receive bot move: " + userId + " " + direction + " ");
@@ -30,7 +29,6 @@ public class GameService {
         }
         return "receive bot move success";
     }
-
 
 
 }

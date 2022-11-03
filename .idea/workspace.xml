@@ -5,39 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d6914e8-9e02-4475-9159-70e0f577ad93" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4c0d6bd8-de61-4379-8dc6-a4a62a3790df.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4c0d6bd8-de61-4379-8dc6-a4a62a3790df.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/controller/pk/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/controller/pk/GameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/controller/pk/ReceiveBotMoveController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/controller/pk/StartGameController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/controller/user/account/InfoController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/controller/user/account/LoginController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/controller/user/account/RegisterController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/controller/user/bot/AddController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/controller/user/bot/GetListController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/controller/user/bot/RemoveController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/controller/user/bot/UpdateController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/pk/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/pk/GameService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/pk/ReceiveBotMoveServiceImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/pk/StartGameServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/user/account/InfoServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/user/account/LoginServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/user/account/RegisterServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/user/bot/AddServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/user/bot/GetListServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/user/bot/RemoveServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/user/bot/UpdateServiceImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/pk/ReceiveBotMoveService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/pk/StartGameService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/user/account/InfoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/user/account/LoginService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/user/account/RegisterService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/user/bot/AddService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/user/bot/GetListService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/user/bot/RemoveService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/user/bot/UpdateService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendcloud/botrunningsystem/src/main/java/com/kob/botrunningsystem/service/impl/utils/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/botrunningsystem/src/main/java/com/kob/botrunningsystem/service/impl/utils/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendcloud/matchingsystem/src/main/java/com/kob/matchingsystem/service/impl/utils/MatchingPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/matchingsystem/src/main/java/com/kob/matchingsystem/service/impl/utils/MatchingPool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/store/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/store/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/user/bot/UserBotIndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/user/bot/UserBotIndexView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/assets/images/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/ContentField.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/ContentField.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/NavBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/NavBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,6 +208,8 @@
       <workItem from="1667276113889" duration="155000" />
       <workItem from="1667276372203" duration="599000" />
       <workItem from="1667276987264" duration="18387000" />
+      <workItem from="1667381521501" duration="1179000" />
+      <workItem from="1667392744978" duration="12967000" />
     </task>
     <servers />
   </component>

@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <router-link class="navbar-brand" :to="{name: 'home'}">King Of Bots</router-link>
+      <router-link class="navbar-brand" :to="{name: 'home'}">Game Of ZZAC</router-link>
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
@@ -12,6 +12,9 @@
           </li>
           <li class="nav-item">
             <router-link :class="route_name == 'ranklist_index' ? 'nav-link active' : 'nav-link'" :to="{name: 'ranklist_index'}">排行榜</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link :class="route_name == 'record_index' ? 'nav-link active' : 'nav-link'" :to="{name: 'record_index'}">讨论分享</router-link>
           </li>
         </ul>
         <ul class="navbar-nav" v-if="$store.state.user.is_login">

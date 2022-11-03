@@ -46,7 +46,7 @@ public class Consumer extends Thread{
 
 
 
-    private final static String receiveBotMoveUrl = "http://127.0.0.1:3000/pk/receive/bot/move/";
+    private final static String receiveBotMoveUrl = "http://127.0.0.1:3000/pk/game/snake/receiveBot";
     @Override
     public void run() {
         UUID uuid = UUID.randomUUID();

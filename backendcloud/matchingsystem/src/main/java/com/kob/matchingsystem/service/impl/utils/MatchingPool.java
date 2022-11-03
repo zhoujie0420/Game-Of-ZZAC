@@ -16,7 +16,7 @@ public class MatchingPool extends Thread{
     private static List<Player> players = new ArrayList<>();
     private ReentrantLock lock = new ReentrantLock();
     private static RestTemplate restTemplate;
-    private static final String startGameUrl = "http://127.0.0.1:3000/pk/start/game/";
+    private static final String startGameUrl = "http://127.0.0.1:3000/pk/game/snake/start";
 
     @Autowired
     public void setRestTemplate(RestTemplate restTemplate) {

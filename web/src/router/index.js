@@ -7,15 +7,16 @@ import UserBotIndexView from '../views/user/bot/UserBotIndexView'
 import NotFound from '../views/error/NotFound'
 import UserAccountLoginView from '../views/user/account/UserAccountLoginView'
 import UserAccountRegisterView from '../views/user/account/UserAccountRegisterView'
+import IndexView from '../views/index/IndexView'
 import store from '../store/index'
 
 const routes = [
   {
     path: "/",
     name: "home",
-    redirect: "/pk/",
+    component: IndexView,
     meta: {
-      requestAuth: true,
+      requestAuth: false,
     }
   },
   {
@@ -34,6 +35,7 @@ const routes = [
       requestAuth: true,
     }
   },
+  
   {
     path: "/record/:recordId/",
     name: "record_content",
