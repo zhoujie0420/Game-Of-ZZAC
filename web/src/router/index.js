@@ -9,6 +9,7 @@ import UserAccountLoginView from '../views/user/account/UserAccountLoginView'
 import UserAccountRegisterView from '../views/user/account/UserAccountRegisterView'
 import IndexView from '../views/index/IndexView'
 import store from '../store/index'
+import DynamicView from '../views/dynamic/DynamicView'
 
 const routes = [
   {
@@ -42,6 +43,14 @@ const routes = [
     component: RecordContentView,
     meta: {
       requestAuth: true,
+    }
+  },
+  {
+    path: "/dynamics/",
+    name: "dynamics_index",
+    component: DynamicView,
+    meta: {
+      requestAuth: false,
     }
   },
   {
