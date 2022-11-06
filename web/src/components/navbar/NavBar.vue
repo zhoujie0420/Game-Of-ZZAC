@@ -25,7 +25,7 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li>
   
-                  <router-link class="dropdown-item" :to="{name: 'user_bot_index'}">我的Bot</router-link>
+                  <router-link class="dropdown-item" :to="{name: 'myspace_index'}">我的空间</router-link>
               </li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#" @click="logout">退出</a></li>

@@ -22,6 +22,7 @@ public class BotController {
 
     @PostMapping("remove")
     public Map<String, String> remove(@RequestParam Map<String, String> data) {
+        System.out.println(" data"+data);
         return botService.remove(data);
     }
     @PostMapping("update")

@@ -85,7 +85,9 @@ public class PostService {
             map.put("error_message","Post不存在或已被删除");
             return map;
         }
-        if(post.getId()!= user.getId()){
+        if(!post.getUserId().equals(user.getId())){
+            System.out.println(post.getUserId());
+            System.out.println(user.getId());
             map.put("error_message","没有权限删除");
             return map;
         }

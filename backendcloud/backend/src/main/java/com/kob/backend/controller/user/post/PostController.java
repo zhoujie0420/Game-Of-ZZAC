@@ -35,7 +35,6 @@ public class PostController {
 
     @RequestMapping ("getlistbyid")
     public List<Post> getlistbyid(@RequestParam Map<String,String> data){
-
         return postService.getlistbyid(data);
     }
 

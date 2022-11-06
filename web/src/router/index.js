@@ -3,13 +3,15 @@ import PkIndexView from '../views/pk/PkIndexView'
 import RecordIndexView from '../views/record/RecordIndexView'
 import RecordContentView from '../views/record/RecordContentView'
 import RanklistIndexView from '../views/ranklist/RanklistIndexView'
-import UserBotIndexView from '../views/user/bot/UserBotIndexView'
 import NotFound from '../views/error/NotFound'
 import UserAccountLoginView from '../views/user/account/UserAccountLoginView'
 import UserAccountRegisterView from '../views/user/account/UserAccountRegisterView'
 import IndexView from '../views/index/IndexView'
 import store from '../store/index'
 import DynamicView from '../views/dynamic/DynamicView'
+import MyspaceView from '../views/user/myspace/MyspaceView'
+import PostView from '../views/user/myspace/PostView'
+import BotView from '../views/user/myspace/BotView'
 
 const routes = [
   {
@@ -54,6 +56,31 @@ const routes = [
     }
   },
   {
+    path: "/myspace/",
+    component: MyspaceView,
+    children: [
+      {
+        path: 'index/',
+        name: "myspace_index",
+        component: PostView
+      },
+      {
+        path: 'posts/',   
+        // 默认是post显示
+        name: "myspace_posts",
+        component: PostView
+      },
+      {
+        path: 'bots/',
+        name: "myspace_bots",
+        component: BotView
+      },
+    ],
+    meta: {
+      requestAuth: true,
+    }
+  },
+  {
     path: "/ranklist/",
     name: "ranklist_index",
     component: RanklistIndexView,
@@ -61,14 +88,7 @@ const routes = [
       requestAuth: true,
     }
   },
-  {
-    path: "/user/bot/",
-    name: "user_bot_index",
-    component: UserBotIndexView,
-    meta: {
-      requestAuth: true,
-    }
-  },
+
   {
     path: "/user/account/login/",
     name: "user_account_login",

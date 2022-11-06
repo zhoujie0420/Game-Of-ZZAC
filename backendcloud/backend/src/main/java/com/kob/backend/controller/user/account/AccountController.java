@@ -33,11 +33,11 @@ public class AccountController {
         return service.register(username, password, confirmedPassword);
     }
 
-    @PostMapping("updateuser")
-    public Map<String, String> updateuser(@RequestParam Map<String, String> map) {
-        String username = map.get("username");
+    @PostMapping("photo")
+    public Map<String, String> photo(@RequestParam Map<String, String> map) {
+
         String photo = map.get("photo");
-        return service.updateuser(username,photo);
+        return service.photo(photo);
     }
 
 }

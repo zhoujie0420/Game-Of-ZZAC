@@ -82,8 +82,9 @@ public class BotService {
 
         User user = UserUtil.getUser();
 
-        int bot_id = Integer.parseInt(data.get("bot_id"));
-        Bot bot = botMapper.selectById(bot_id);
+        int id = Integer.parseInt(data.get("id"));
+        System.out.println(id);
+        Bot bot = botMapper.selectById(id);
         Map<String, String> map = new HashMap<>();
 
 
@@ -96,7 +97,7 @@ public class BotService {
             map.put("error_message", "没有权限删除该Bot");
             return map;
         }
-        botMapper.deleteById(bot_id);
+        botMapper.deleteById(id);
         map.put("error_message", "success");
         return map;
 

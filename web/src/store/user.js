@@ -6,6 +6,9 @@ export default {
         username: "",
         photo: "",
         token: "",
+        refresh: "",
+        botCount: localStorage.getItem('botCount') ? localStorage.getItem('botCount') : 0,
+        postCount: localStorage.getItem('postCount') ? localStorage.getItem('postCount') : 0,
         is_login: false,
         pulling_info: true,  // 是否正在从云端拉取信息
     },
@@ -17,16 +20,19 @@ export default {
           },
         updateUsername (state, username) {
             state.username = username;
-        },
+        },  // 更新用户名  未使用
+        
         updateUser(state, user) {
             state.id = user.id;
             state.username = user.username;
             state.photo = user.photo;
             state.is_login = user.is_login;
+            state.rating = user.rating;
         },
         updateToken(state, token) {
             state.token = token;
         },
+  
         logout(state) {
             state.id = "";
             state.username = "";

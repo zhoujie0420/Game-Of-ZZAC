@@ -29,43 +29,15 @@ public class AccountService {
     private final AuthenticationManager authenticationManager;
     private final PasswordEncoder passwordEncoder;
 
-    public Map<String,String>  updateuser(String username,String photo) {  //修改用户信息
+    public Map<String,String>  photo(String photo) {  //修改用户信息
 
         Map<String, String> map = new HashMap<>();
         User user = UserUtil.getUser();
-
-        if (username == null) {
-            map.put("error_message", "用户名不能为空");
-            return map;
-        }
-
-        username = username.trim();    //删掉空白字符
-        if (username.length() == 0) {
-            map.put("error_message", "用户名不能为空");
-            return map;
-        }
-
-        if (username.length() > 100) {
-            map.put("error_message", "用户名长度不能大于100");
-            return map;
-        }
-
-        if(!Objects.equals(user.getUsername(), username)) {
-            QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("username", username);
-            List<User> users = userMapper.selectList(queryWrapper);
-            if (!users.isEmpty()) {
-                map.put("error_message", "用户名已存在");
-                return map;
-            }
-        }
 
         if (!RegularUtil.isAvatarUrl(photo)) {
             map.put("error_message","图片路径错误, 请检查~");
             return map;
         }
-
-        user.setUsername(username);
         user.setPhoto(photo);
         QueryWrapper<User> query = new QueryWrapper<>();
         query.eq("id", user.getId());
