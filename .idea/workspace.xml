@@ -5,27 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d6914e8-9e02-4475-9159-70e0f577ad93" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/controller/user/comment/CommentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/mapper/CommentMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/pojo/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/user/comment/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4c0d6bd8-de61-4379-8dc6-a4a62a3790df.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4c0d6bd8-de61-4379-8dc6-a4a62a3790df.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/consumer/utils/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/consumer/utils/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/controller/user/post/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/controller/user/post/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/ranklist/GetRanklistServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/ranklist/GetRanklistServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/user/account/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/user/account/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/user/bot/BotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/user/bot/BotService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/user/post/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/user/post/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/matchingsystem/src/main/java/com/kob/matchingsystem/service/impl/utils/MatchingPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/matchingsystem/src/main/java/com/kob/matchingsystem/service/impl/utils/MatchingPool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/components/PostsView.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/components/user/UserProfileInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/user/UserProfileInfo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/index/IndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/index/IndexView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/dynamic/DynamicView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/dynamic/DynamicView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/user/myspace/BotView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/user/myspace/BotView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/user/myspace/temp.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zmdimage/设计流程.png" beforeDir="false" afterPath="$PROJECT_DIR$/redeme_image/设计流程.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +88,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BackendApplication">
+  <component name="RunManager" selected="Spring Boot.BotRunningSystemApplication">
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" />
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-1.8" />
@@ -156,8 +138,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.MatchSystemApplication" />
         <item itemvalue="Spring Boot.BotRunningSystemApplication" />
+        <item itemvalue="Spring Boot.MatchSystemApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -206,6 +188,8 @@
       <workItem from="1667797207882" duration="5417000" />
       <workItem from="1667885187120" duration="5203000" />
       <workItem from="1667890480339" duration="53000" />
+      <workItem from="1667902895618" duration="2641000" />
+      <workItem from="1667919164660" duration="68000" />
     </task>
     <servers />
   </component>

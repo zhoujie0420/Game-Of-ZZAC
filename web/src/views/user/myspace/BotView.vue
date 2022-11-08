@@ -109,7 +109,6 @@
                   class="update-bot"
                   data-bs-toggle="modal"
                   :data-bs-target="'#update-bot-modal-' + bot.id"
-                  :id="'update_button' + bot.id"
                 >
                   <span>修改</span>
                 </button>
