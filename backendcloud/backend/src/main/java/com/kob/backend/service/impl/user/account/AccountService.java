@@ -126,6 +126,7 @@ public class AccountService {
         String photo = "https://cdn.acwing.com/media/user/profile/photo/175167_lg_2151948c45.jpg";
         User user = new User(null, username, encodePassword, photo, 1500);
         userMapper.insert(user);
+
         map.put("error_message", "success");
         return map;
     }

@@ -25,7 +25,7 @@ public class GetRanklistServiceImpl implements GetRanklistService {
         List<User> users = userMapper.selectPage(userIPage, queryWrapper).getRecords();
         JSONObject resp = new JSONObject();
         for (User user: users)
-            user.setPassword("");
+            user.setPassword(""); //保护作用，将密码设为空
         resp.put("users", users);
         resp.put("users_count", userMapper.selectCount(null));
         return resp;

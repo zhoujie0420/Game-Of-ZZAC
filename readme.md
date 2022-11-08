@@ -16,6 +16,21 @@ create table bot
         unique (id)
 );
 
+create table comment
+(
+    id         int auto_increment
+        primary key,
+    foreign_id int          not null,
+    user_id    int          null,
+    username   varchar(20)  not null,
+    content    varchar(255) null,
+    pid        int          not null,
+    target     varchar(255) null,
+    createtime datetime     not null,
+    constraint id
+        unique (id)
+);
+
 create table post
 (
     id         int auto_increment
@@ -60,4 +75,12 @@ create table user
         unique (id)
 );
 
+
+
 ```
+
+设计流程图
+
+
+
+![Pic](redeme_image\设计流程.png "Pic")

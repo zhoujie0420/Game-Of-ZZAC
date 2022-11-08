@@ -19,7 +19,6 @@ public class PostController {
 
     @PostMapping("add")
     public Map<String,String>add(@RequestParam Map<String,String>data){
-        System.out.println(data);
         return postService.add(data);
     }
 

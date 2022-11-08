@@ -32,7 +32,9 @@ public class Player {
             res.append(x);
         }
         return res.toString();
+
     }
+
 
 
     public List<Cell> getCells() {

@@ -86,8 +86,6 @@ public class PostService {
             return map;
         }
         if(!post.getUserId().equals(user.getId())){
-            System.out.println(post.getUserId());
-            System.out.println(user.getId());
             map.put("error_message","没有权限删除");
             return map;
         }

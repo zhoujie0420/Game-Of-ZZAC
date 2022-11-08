@@ -28,7 +28,6 @@
           {{ $store.state.user.username }}
         </div>
 
-  
         <div
           class="modal fade"
           id="change_avatar"
@@ -47,7 +46,6 @@
               <div class="modal-body avatar-info">
                 <img
                   :src="$store.state.user.photo"
-
                   style="
                     width: 100px;
                     height: 100px;

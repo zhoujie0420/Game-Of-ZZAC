@@ -17,7 +17,7 @@
     </div>
     <div class="row">
       <div class="col-11 desc">
-        <div class="desc-title">What is Game Of ZZAC？</div>
+        <div class="desc-title">What is Game Of ZZAC？</div> 
 
         <div class="desc-simple-content">
           &nbsp;&nbsp;&nbsp;&nbsp;Game of ZZAC是<span>在线的程序对抗平台</span>，玩家可以根据已有的游戏规则进行比赛一决胜负!
@@ -31,7 +31,37 @@
             Of Bots 账户(如果已有账户则跳过此步骤,直接对战)
           </div>
           <div>
-            &nbsp;&nbsp;&nbsp;&nbsp;2. 按照游戏说明编写自己的<span>AI程序</span>或<span>亲自出马</span>。
+            &nbsp;&nbsp;&nbsp;&nbsp;2. 按照<!-- Button trigger modal -->
+            <a class="information-title" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              游戏说明
+            </a>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">游戏说明</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <h3>1、运行机制</h3>
+                    <p>游戏属于回合制，需要用户或Bot进行每一回合的操作，当云端接收到对局中两名用户的操作时，返回对局信息， 如果操作没有使得对局结束， 就会循环往复的进行读取用户或Bot操作， 直到对局结束。</p>
+                    <h3>2、Bot代码模板</h3>
+                    <p>我们为所有用户提供了一个BotAI模板，这样可以更好的方便用户关注于AI算法的编写与调试本身，详情可在创建Bot中的链接中访问</p>
+                    <h3>3、Post讨论</h3>
+                    <p>为了方便更好的交流AI代码，我们他一共了一个良好的讨论，可在讨论分享中查看，欢迎各位Boter讨论分享</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            编写自己的<span>AI程序</span>或<span>亲自出马</span>。
           </div>
           <div>
             &nbsp;&nbsp;&nbsp;&nbsp;3. 点击右上角账户名，进入个人空间点击我的Bots，创建 Bot 并上传程序。
@@ -115,6 +145,14 @@ export default {
   }
   .how-fix-bug > div {
     padding-top: 1vh;
+  }
+
+
+  .information-title {
+  color: #19d3ea;
+  font-size: 18px;
+  cursor: pointer;  /*鼠标悬停变小手*/
+  width: 100%;
   }
   </style>
   

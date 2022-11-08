@@ -4,11 +4,8 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.kob.backend.mapper.BotMapper;
 import com.kob.backend.pojo.Bot;
 import com.kob.backend.pojo.User;
-import com.kob.backend.service.impl.utils.UserDetailsImpl;
 import com.kob.backend.utils.UserUtil;
 import lombok.AllArgsConstructor;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -83,7 +80,6 @@ public class BotService {
         User user = UserUtil.getUser();
 
         int id = Integer.parseInt(data.get("id"));
-        System.out.println(id);
         Bot bot = botMapper.selectById(id);
         Map<String, String> map = new HashMap<>();
 

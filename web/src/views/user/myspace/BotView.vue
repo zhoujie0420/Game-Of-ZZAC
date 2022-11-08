@@ -49,12 +49,10 @@
 
                 <div class="mb-2">
                   <label for="code" class="form-label">Code</label>
-                  <a
-                    class="code-template"
-                    target="_blank"
-                    href=""
-                    >代码模板</a
-                  >
+                  <a class="code-template"  target="_blank"   href="https://www.yuque.com/zhoujie-ftecs/dktge5/vck9dr?# 《代码模板》">代码模板</a>
+                  
+                  
+              
                   <VAceEditor
                     v-model:value="bot.content"
                     lang="c_cpp"
@@ -167,12 +165,7 @@
                           ></textarea>
                   
                           <label for="code" class="form-label">Code</label>
-                          <a
-                            class="code-template"
-                            target="_blank"
-                            href=""
-                            >代码模板</a
-                          >
+                       
                           <VAceEditor
                             @init="editorInit"
                             v-model:value="bot.content"
