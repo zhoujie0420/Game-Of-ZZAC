@@ -36,7 +36,7 @@ public class CommentService {
 
         List<Comment> comments = commentMapper.selectList(queryWrapper);
 
-        List<Comment> rootComments = comments.stream().filter(comment -> comment.getPid() == null).collect(Collectors.toList());
+        List<Comment> rootComments = comments.stream().filter(comment -> comment.getPid() == 0).collect(Collectors.toList());
         // 使用stream() 将rootComments过滤成父级评论
 
         for (Comment rootComment : rootComments) {
@@ -61,7 +61,7 @@ public class CommentService {
             map.put("error_message","该post不存在或已被删除");
             return map;
         }
-        if(content == null){
+        if(content == null || content.length() == 0){
             map.put("error_message","评论不可以为空");
             return map;
         }

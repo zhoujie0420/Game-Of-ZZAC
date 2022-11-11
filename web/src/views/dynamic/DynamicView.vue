@@ -1,203 +1,321 @@
 <template>
-    <div class="container body-base">
-      <div class="row">
-        <div
-          class="card col-xs-12 col-sm-8 col-md-8"
-          style="margin: 0 auto; margin-top: 20px; padding-bottom: 20px"
-        >
-          <div class="card-header card-header-name">讨论分享</div>
-  
-          <ContentFiled v-for="post in postlist" :key="post.id">
-            <div class="post-user-info">
-              <img
-                @click="to_user_profile(post.userId)"
-                class="post-user-avatar"
-                :src="post.photo"
-                style="cursor: pointer"
-              />
-              <div class="post-username">{{ post.username }}</div>
-              <div class="post-time">发帖时间 {{ post.createtime }}</div>
-          
-            </div>
-  
-            <div class="card" style="margin-top: 20px">
-              <div class="card-body">{{ post.content }}</div>
+  <div class="container body-base">
+    <div class="row">
+      <div class="card col-xs-12 col-sm-8 col-md-8" style="margin: 0 auto; margin-top: 20px; padding-bottom: 20px">
+        <div class="card-header card-header-name">讨论分享</div>
 
-              <!-- Button trigger modal -->
-                  <button type="button" 
-                  class="btn btn-primary reply-btn" 
-                  data-bs-toggle="modal" 
-                  :data-bs-target="'#reply-post-' + post.id"
-                  >
-                    评论
-                  </button>
+        <ContentFiled v-for="post in postlist" :key="post.id">
+          <div class="post-user-info">
+            <img @click="to_user_profile(post.userId)" class="post-user-avatar" :src="post.photo"
+              style="cursor: pointer" />
+            <div class="post-username">{{ post.username }}</div>
+            <div class="post-time">发帖时间 {{ post.createtime }}</div>
+          </div>
+          <div class="card-body">{{ post.content }}</div>
+          <textarea class="form-control" v-model="commentinput[post.id]" rows="3"></textarea>
 
-                  <!-- Modal -->
-                  <div class="modal fade " 
-                  :id="'reply-post-' + post.id" 
-                  tabindex="-1" 
-                  >
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 >评论</h5>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                          <input type="text" v-model="replypost.content" >
-                        </div>
-                        <div class="modal-footer">
-                          <div class="error-msg">{{ bot.error_message }}</div>
-                          <button type="button" 
-                          class="btn btn-secondary" 
-                          data-bs-dismiss="modal" 
-                          >Close</button>
-                          <!-- <button type="button" class="btn btn-primary"  @click="reply_post(post.id,post.username)">Sure</button> -->
-                        </div>
-                      </div>
-                    </div>
+          <button type="button" class="reply-btn" @click="add_comment(post.id)">提交评论</button>
+          <div class="error-message">{{ error_message }}</div>
+          <button type="button" class="opencomment-btn" @click="getcommentlist(post.id)">展开</button>
+
+          <div class="card" v-for="comment in commentlist" :key="comment.id">
+
+            <div v-if="post.id === comment.foreignId">
+              <div class="post-user-info">
+                <div class="comment-username">{{ comment.username }}
+                  <button v-if="$store.state.user.username === comment.username" type="button" class="btn btn-danger"
+                    @click="remove_comment(comment.id)">删除</button>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                    :data-bs-target="'#add-comment-modal-' + comment.id">回复</button>
+                  <!-- 回复model -->
+                  <div class="modal fade" :id="'update-bot-modal-' + comment.id" tabindex="-1">
+                    <input />
+                    <div class="error-msg">{{ error_message }}</div>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                      取消
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                      提交
+                    </button>
                   </div>
 
+                </div>
+                <div class="comment-time"> {{ comment.createtime }}</div>
+              </div>
+              <div class="comment-content">
+                {{ comment.content }}
+              </div>
 
-                  <div v-for="post in postlist.children" :key="post.id"></div>
+              <br />
+              <div class="childcomment-card" v-for="childcomment in comment.childrenComment" :key="childcomment.id">
+
+                <div class="post-user-info">
+                  <div class="childcomment-username">{{ childcomment.username }} 回复 {{ childcomment.target }}
+                    <button v-if="$store.state.user.username === childcomment.username" type="button"
+                      class="btn btn-danger" @click="remove_comment(childcomment.id)">删除</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                      :data-bs-target="'#add-comment-modal-' + comment.id">回复</button>
+                  </div>
+
+                  <div class="childcomment-time"> {{ childcomment.createtime }}</div>
+                </div>
+                <span class="childcomment-content">{{ childcomment.content }}</span>
+              </div>
             </div>
-          </ContentFiled>
-        </div>
+
+          </div>
+
+        </ContentFiled>
       </div>
     </div>
-  </template>
+  </div>
+</template>
   
-  <script>
-  import ContentFiled from '../../components/ContentField.vue'
-  import $ from 'jquery'
-  import { ref ,reactive } from 'vue'
-  import router from "@/router/index";
-  import { useStore } from "vuex";
-  export default {
-    name: "DynamicsView",
-    components: {
-      ContentFiled,
-    },
-    setup () {
-      const store = useStore();
-  
-      let postlist = ref([]);
+<script>
+import ContentFiled from '../../components/ContentField.vue'
+import $ from 'jquery'
+import { ref } from 'vue'
+import router from "@/router/index";
+import { useStore } from "vuex";
+export default {
+  name: "DynamicsView",
+  components: {
+    ContentFiled,
+  },
+  setup() {
+    const store = useStore();
+    const commentinput = ref([]);
+    let postlist = ref([]);
+    let commentlist = ref([]);
+    let error_message = ref("");
 
-      const replypost = reactive({
-        content: '',
-        error_message : '',
-      })
+    const add_comment = (id) => {
+      error_message.value = "";
+      $.ajax({
+        url: "http://127.0.0.1:3000/api/user/comment/add/",
+        type: "post",
+        data: {
+          foreignId: id,
+          content: commentinput.value[id],
+          pid: "0",
+          target: ""
+        },
+        headers: {
+          Authorization: "Bearer " + store.state.user.token,
+        },
+        success(resp) {
+          if (resp.error_message === "success") {
 
-      // const reply_post = () => {
-      //       bot.error_message = "";
-           
-      //       $.ajax({
-      //           url: "http://127.0.0.1:3000/api/user/reply/add/",
-      //           type: "post",
-      //           data: {
-      //             foreignId: bot.id,
-      //             content: bot.title,
-      //             pid: bot.description,
-      //             target: bot.target,
-      //           },
-      //           headers: {
-      //               Authorization: "Bearer " + store.state.user.token,
-      //           },
-      //           success(resp) {
-      //               if (resp.error_message === "success") {
-      //                   bot.title = "";
-      //                   bot.description = "";
-      //                   bot.content = "";
-      //                   Modal.getInstance('#update-bot-modal-' + bot.id).hide();
+            commentinput.value[id] = "";
+            getcommentlist(id);
 
-      //               } else {
-      //                   bot.error_message = resp.error_message;
-      //                   setTimeout(() => { bot.error_message = ""; }, 2000);
-      //                   Modal.getInstance('#update-bot-modal-' + post.id).show();
-      //               }
-      //               refresh_bots();
-      //           }
-      //       })
-      //   }
-
-
-      const allPosts = () => {
-        $.ajax({
-          url: "http://127.0.0.1:3000/api/user/post/getlist/",
-          type: "post",
-          success (resp) {
-            postlist.value = resp;
-          },
-        })
-      }
-      allPosts();
-  
-      const to_user_profile = (userId) => {
-        if (store.state.user.is_login) {
-          if (userId === store.state.user.id) {
-            router.push({
-              name: "myspace_index",
-            });
           } else {
-            router.push({
-              name: "diaplay_view",
-              params: {
-                userId: userId,
-              },
-            });
+            error_message.value = resp.error_message;
+
           }
-        } else {
-          router.push({ name: "login_view" });
         }
-      };
-  
-      return {
-        postlist,
-        to_user_profile,
-        // reply_post,
-        replypost,
+      })
+    }
+
+
+    const allPosts = () => {
+      $.ajax({
+        url: "http://127.0.0.1:3000/api/user/post/getlist/",
+        type: "post",
+        success(resp) {
+          postlist.value = resp;
+        },
+      })
+    }
+
+    const getcommentlist = (foreignId) => {
+      $.ajax({
+        url: "http://localhost:3000/api/user/comment/getlist/",
+        type: "post",
+        data: {
+          foreignId: foreignId,
+        },
+        success(resp) {
+
+          commentlist.value = resp;
+
+        }
+      });
+    };
+
+
+
+    const remove_comment = (id) => {
+      $.ajax({
+        url: "http://127.0.0.1:3000/api/user/comment/remove/",
+        type: "post",
+        data: {
+          id: id,
+        },
+        headers: {
+          Authorization: "Bearer " + store.state.user.token,
+        },
+        success(resp) {
+          if (resp.error_message === "success") {
+            getcommentlist(id);
+          } else {
+            console.log(resp.error_message);
+          }
+        }
+      })
+    }
+
+
+    allPosts();
+
+    const to_user_profile = (userId) => {
+      if (store.state.user.is_login) {
+        if (userId === store.state.user.id) {
+          router.push({
+            name: "myspace_index",
+          });
+        } else {
+          router.push({
+            name: "diaplay_view",
+            params: {
+              userId: userId,
+            },
+          });
+        }
+      } else {
+        router.push({ name: "login_view" });
       }
+    };
+
+    return {
+      postlist,
+      to_user_profile,
+      commentlist,
+      getcommentlist,
+      commentinput,
+      add_comment,
+      error_message,
+      remove_comment,
     }
   }
-  </script>
+}
+</script>
   
-  <style scoped>
-  .error-msg {
+<style scoped>
+.error-message {
+  color: red;
+}
+
+.error-msg {
   margin-right: 20px;
   font-size: 16px;
   color: #c3404b;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-  .card-header-name {
-    font-weight: bold;
-    font-size: 24px;
-  }
-  .post-user-info {
-    width: 100%;
-    height: 5vh;
-  }
-  .post-user-avatar {
-    float: left;
-    height: 5vh;
-    border-radius: 100%;
-  }
-  .post-username {
-    float: left;
-    line-height: 5vh;
-    margin-left: 1vh;
-    font-weight: bold;
-  }
-  .post-time {
-    float: right;
-    font-size: 14px;
-    line-height: 5vh;
-  }
-  .reply-btn  {
-    margin-left: 88%;
-    margin-right: 3%;
-    margin-top: 10px;
-    margin-bottom: 10px;
 
-  }
-  </style>
+.card-header-name {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.post-user-info {
+  width: 100%;
+  height: 5vh;
+}
+
+.post-user-avatar {
+  float: left;
+  height: 5vh;
+  border-radius: 100%;
+}
+
+.post-username {
+  Font-size: 30px;
+  float: left;
+  line-height: 5vh;
+  margin-left: 1vh;
+  font-weight: bold;
+}
+
+
+
+.post-time {
+  float: right;
+  font-size: 14px;
+  line-height: 5vh;
+}
+
+
+
+.childcomment-card {
+  margin-top: 2px;
+  width: 80%;
+  margin-left: 10%;
+  background-color: antiquewhite;
+  height: 8vh;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.comment-username {
+  Font-size: 20px;
+  float: left;
+  line-height: 5vh;
+  margin-left: 5vh;
+  font-weight: bold;
+}
+
+.comment-time {
+  float: right;
+  margin-right: 2vh;
+  font-size: 14px;
+  line-height: 5vh;
+}
+
+.comment-content {
+  float: left;
+  margin-left: 5vh;
+  font-size: 16px;
+}
+
+
+
+.childcomment-username {
+  float: left;
+  margin-left: 5vh;
+  font-size: 16px;
+  margin-top: 3px;
+  font-weight: bold;
+}
+
+.childcomment-time {
+  float: right;
+  margin-right: 2vh;
+  font-size: 14px;
+  line-height: 5vh;
+}
+
+.childcomment-content {
+  float: left;
+  margin-left: 5vh;
+  font-size: 16px;
+}
+
+
+.opencomment-btn {
+  margin-left: 88%;
+  margin-right: 3%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-color: #ccc;
+}
+
+.reply-btn {
+  margin-left: 85%;
+  margin-right: 3%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(165, 165, 228);
+}
+</style>
   

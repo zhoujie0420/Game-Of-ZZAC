@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2d6914e8-9e02-4475-9159-70e0f577ad93" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/user/comment/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/user/comment/CommentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/dynamic/DynamicView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/dynamic/DynamicView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/user/myspace/BotView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/user/myspace/BotView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/index/IndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/index/IndexView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,6 +192,9 @@
       <workItem from="1667890480339" duration="53000" />
       <workItem from="1667902895618" duration="2641000" />
       <workItem from="1667919164660" duration="68000" />
+      <workItem from="1667985461331" duration="5224000" />
+      <workItem from="1668043248506" duration="9240000" />
+      <workItem from="1668135971507" duration="1450000" />
     </task>
     <servers />
   </component>
