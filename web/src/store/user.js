@@ -6,9 +6,7 @@ export default {
         username: "",
         photo: "",
         token: "",
-        refresh: "",
-        botCount: localStorage.getItem('botCount') ? localStorage.getItem('botCount') : 0,
-        postCount: localStorage.getItem('postCount') ? localStorage.getItem('postCount') : 0,
+        email: "1 ",
         is_login: false,
         pulling_info: true,  // 是否正在从云端拉取信息
     },
@@ -25,6 +23,7 @@ export default {
         updateUser(state, user) {
             state.id = user.id;
             state.username = user.username;
+            state.email = user.email;
             state.photo = user.photo;
             state.is_login = user.is_login;
             state.rating = user.rating;
@@ -36,6 +35,7 @@ export default {
         logout(state) {
             state.id = "";
             state.username = "";
+            state.email = "";
             state.photo = "";
             state.token = "";
             state.is_login = false;
@@ -67,6 +67,30 @@ export default {
                 }
             });
         },
+        
+        emaillogin(context, data) {
+            $.ajax({
+              url: "http://127.0.0.1:3000/api/user/account/emailtoken/",
+              type: "post",
+              data: {
+                email: data.email,
+                code: data.code,
+              },
+              success(resp) {
+                if (resp.error_message === "success") {
+                    localStorage.setItem("jwt_token", resp.token);
+                    context.commit("updateToken", resp.token);
+                    data.success(resp);
+                } else {
+                    data.error(resp);
+                }
+              },
+              error(resp) {
+                data.error(resp);
+            }
+            });
+            
+          },
         getinfo(context, data) {
             $.ajax({
                 url: "http://127.0.0.1:3000/api/user/account/info/",
@@ -81,6 +105,7 @@ export default {
                             is_login: true,
                         });
                         data.success(resp);
+                        console.log(resp);
                     } else {
                         data.error(resp);
                     }

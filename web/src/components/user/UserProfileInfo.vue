@@ -27,6 +27,10 @@
         <div class="info-username">
           {{ $store.state.user.username }}
         </div>
+        <hr />
+        <div class="info-username">
+          {{ $store.state.user.email }}
+        </div>
 
         <div
           class="modal fade"

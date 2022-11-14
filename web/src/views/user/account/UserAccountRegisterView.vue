@@ -8,6 +8,10 @@
                         <input v-model="username" type="text" class="form-control" id="username" placeholder="请输入用户名">
                     </div>
                     <div class="mb-3">
+                        <label for="email" class="form-label">邮箱</label>
+                        <input v-model="email" type="email" class="form-control" id="email" placeholder="请输入邮箱">
+                    </div>
+                    <div class="mb-3">
                         <label for="password" class="form-label">密码</label>
                         <input v-model="password" type="password" class="form-control" id="password" placeholder="请输入密码">
                     </div>
@@ -35,6 +39,7 @@ export default {
     },
     setup() {
         let username = ref('');
+        let email = ref('');
         let password = ref('');
         let confirmedPassword = ref('');
         let error_message = ref('');
@@ -45,6 +50,7 @@ export default {
                 type: "post",
                 data: {
                     username: username.value,
+                    email: email.value,
                     password: password.value,
                     confirmedPassword: confirmedPassword.value,
                 },
@@ -61,6 +67,7 @@ export default {
         return {
             username,
             password,
+            email,
             confirmedPassword,
             error_message,
             register,

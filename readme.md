@@ -2,7 +2,7 @@
 
 ## sql
 ```
-create table bot
+create table kob.bot
 (
     id          int auto_increment
         primary key,
@@ -16,7 +16,7 @@ create table bot
         unique (id)
 );
 
-create table comment
+create table kob.comment
 (
     id         int auto_increment
         primary key,
@@ -31,7 +31,7 @@ create table comment
         unique (id)
 );
 
-create table post
+create table kob.post
 (
     id         int auto_increment
         primary key,
@@ -45,7 +45,7 @@ create table post
         unique (id)
 );
 
-create table record
+create table kob.record
 (
     id         int auto_increment,
     a_id       int           null,
@@ -63,17 +63,19 @@ create table record
         unique (id)
 );
 
-create table user
+create table kob.user
 (
     id       int auto_increment
         primary key,
     username varchar(100)     null,
     password varchar(100)     null,
-    photo    varchar(1000)    null,
+    email    varchar(255)     null,
     rating   int default 1500 null,
+    photo    varchar(1000)    null,
     constraint id
         unique (id)
 );
+
 
 
 

@@ -5,17 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d6914e8-9e02-4475-9159-70e0f577ad93" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4c0d6bd8-de61-4379-8dc6-a4a62a3790df.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4c0d6bd8-de61-4379-8dc6-a4a62a3790df.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/views/user/account/temp1.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/controller/user/account/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/controller/user/account/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/controller/user/post/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/controller/user/post/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/pojo/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/user/account/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/user/account/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/test/java/com/kob/backend/BackendApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/test/java/com/kob/backend/BackendApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/dynamic/DynamicView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/dynamic/DynamicView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/utils/UtilsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/utils/UtilsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/user/UserProfileInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/user/UserProfileInfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/store/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/store/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/user/account/UserAccountLoginView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/user/account/UserAccountLoginView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/user/account/UserAccountRegisterView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/user/account/UserAccountRegisterView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,6 +254,9 @@
       <workItem from="1668135971507" duration="1450000" />
       <workItem from="1668220186754" duration="10505000" />
       <workItem from="1668330938376" duration="13379000" />
+      <workItem from="1668401349958" duration="1134000" />
+      <workItem from="1668422842173" duration="5062000" />
+      <workItem from="1668438240895" duration="45000" />
     </task>
     <servers />
   </component>

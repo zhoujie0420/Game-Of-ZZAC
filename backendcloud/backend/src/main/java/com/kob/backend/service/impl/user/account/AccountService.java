@@ -10,14 +10,11 @@ import com.kob.backend.utils.RegularUtil;
 import com.kob.backend.utils.UserUtil;
 import com.kob.backend.utils.redis.RedisUtil;
 import lombok.AllArgsConstructor;
-import org.apache.tomcat.util.buf.StringCache;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -109,6 +106,7 @@ public class AccountService {
         Map<String, String> map = new HashMap<>();
         map.put("error_message", "success");
         map.put("id", user.getId().toString());
+        map.put("email",user.getEmail());
         map.put("username", user.getUsername());
         map.put("photo", user.getPhoto());
         return map;
@@ -163,7 +161,7 @@ public class AccountService {
         queryWrapper1.eq("email", email);
         List<User> users1 = userMapper.selectList(queryWrapper1);
         if (!users1.isEmpty()) {
-            map.put("error_message", "该邮箱已注册，请直接登录");
+            map.put("error_message", "该邮箱已注册，请直接输入");
             return map;
         }
 
