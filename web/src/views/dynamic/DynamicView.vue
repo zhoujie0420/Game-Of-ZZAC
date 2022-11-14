@@ -25,20 +25,7 @@
                 <div class="comment-username">{{ comment.username }}
                   <button v-if="$store.state.user.username === comment.username" type="button" class="btn btn-danger"
                     @click="remove_comment(comment.id)">删除</button>
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                    :data-bs-target="'#add-comment-modal-' + comment.id">回复</button>
-                  <!-- 回复model -->
-                  <div class="modal fade" :id="'update-bot-modal-' + comment.id" tabindex="-1">
-                    <input />
-                    <div class="error-msg">{{ error_message }}</div>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                      取消
-                    </button>
-                    <button type="button" class="btn btn-primary">
-                      提交
-                    </button>
-                  </div>
-
+                
                 </div>
                 <div class="comment-time"> {{ comment.createtime }}</div>
               </div>
@@ -47,7 +34,9 @@
               </div>
 
               <br />
-              <div class="childcomment-card" v-for="childcomment in comment.childrenComment" :key="childcomment.id">
+
+            <!-- 多级评论  未实现 -->
+              <!-- <div class="childcomment-card" v-for="childcomment in comment.childrenComment" :key="childcomment.id">
 
                 <div class="post-user-info">
                   <div class="childcomment-username">{{ childcomment.username }} 回复 {{ childcomment.target }}
@@ -60,7 +49,7 @@
                   <div class="childcomment-time"> {{ childcomment.createtime }}</div>
                 </div>
                 <span class="childcomment-content">{{ childcomment.content }}</span>
-              </div>
+              </div> -->
             </div>
 
           </div>
@@ -88,6 +77,7 @@ export default {
     let postlist = ref([]);
     let commentlist = ref([]);
     let error_message = ref("");
+    let stateinput = ref("");
 
     const add_comment = (id) => {
       error_message.value = "";
@@ -196,6 +186,7 @@ export default {
       add_comment,
       error_message,
       remove_comment,
+      stateinput,
     }
   }
 }

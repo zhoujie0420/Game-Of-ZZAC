@@ -6,7 +6,6 @@ import com.kob.backend.service.impl.user.post.PostService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.plaf.PanelUI;
 import java.util.List;
 import java.util.Map;
 

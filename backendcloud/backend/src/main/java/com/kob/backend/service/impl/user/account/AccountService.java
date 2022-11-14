@@ -4,10 +4,13 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.kob.backend.mapper.UserMapper;
 import com.kob.backend.pojo.User;
 import com.kob.backend.service.impl.utils.UserDetailsImpl;
+import com.kob.backend.service.impl.utils.UtilsService;
 import com.kob.backend.utils.JwtUtil;
 import com.kob.backend.utils.RegularUtil;
 import com.kob.backend.utils.UserUtil;
+import com.kob.backend.utils.redis.RedisUtil;
 import lombok.AllArgsConstructor;
+import org.apache.tomcat.util.buf.StringCache;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -28,6 +31,7 @@ public class AccountService {
     private final UserMapper userMapper;
     private final AuthenticationManager authenticationManager;
     private final PasswordEncoder passwordEncoder;
+    private final RedisUtil redisUtil;
 
     public Map<String,String>  photo(String photo) {  //修改用户信息
 
@@ -44,6 +48,41 @@ public class AccountService {
         userMapper.update(user, query);
         map.put("error_message", "success");
         return  map;
+    }
+
+    public Map<String,String> getEmailToken(String email ,String code){ //邮箱登录
+        Map<String,String> map = new HashMap<>();
+        if(!redisUtil.hasKey(email)){
+            System.out.println("不存在这个email");
+            map.put("error_message","邮箱错误");
+            return map;
+        }
+
+
+        // 强制转化object会报  java.lang.Integer cannot be cast to java.lang.String 错误
+        // String.valueOf 实质调用 object.toString() 方法
+        String getcode = String.valueOf(redisUtil.get(email));
+        System.out.println(getcode);
+        System.out.println(code);
+        if(!Objects.equals(code, getcode)){
+            map.put("error_message","验证码错误");
+            return map;
+        }
+
+        //下面是成功匹配后的操作
+        //需要将 redis 的 key 删除
+        redisUtil.del(email);
+
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("email", email);
+        User user = userMapper.selectOne(queryWrapper);
+
+        //生成jwt (通过id)
+        String jwt = JwtUtil.createJWT(user.getId().toString());
+
+        map.put("error_message" ,"success");
+        map.put("token",jwt);
+        return map;
     }
 
     public Map<String, String> getToken(String username, String password) {  //登录
@@ -75,7 +114,7 @@ public class AccountService {
         return map;
     }
 
-    public Map<String, String> register(String username, String password, String confirmedPassword) {  //注册
+    public Map<String, String> register(String username, String password, String confirmedPassword ,String email) {  //注册
         Map<String, String> map = new HashMap<>();
 
         if (username == null) {
@@ -114,6 +153,21 @@ public class AccountService {
             return map;
         }
 
+
+        if(!RegularUtil.isEmail(email)){
+            map.put("error_message","邮箱地址错误，重新填写");
+            return map;
+        }
+
+        QueryWrapper<User> queryWrapper1 = new QueryWrapper<>();
+        queryWrapper1.eq("email", email);
+        List<User> users1 = userMapper.selectList(queryWrapper1);
+        if (!users1.isEmpty()) {
+            map.put("error_message", "该邮箱已注册，请直接登录");
+            return map;
+        }
+
+
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("username", username);
         List<User> users = userMapper.selectList(queryWrapper);
@@ -124,7 +178,7 @@ public class AccountService {
 
         String encodePassword = passwordEncoder.encode(password);
         String photo = "https://cdn.acwing.com/media/user/profile/photo/175167_lg_2151948c45.jpg";
-        User user = new User(null, username, encodePassword, photo, 1500);
+        User user = new User(null, username, encodePassword, email,photo, 1500);
         userMapper.insert(user);
 
         map.put("error_message", "success");

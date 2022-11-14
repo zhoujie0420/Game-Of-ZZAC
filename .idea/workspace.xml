@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d6914e8-9e02-4475-9159-70e0f577ad93" name="变更" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4c0d6bd8-de61-4379-8dc6-a4a62a3790df.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4c0d6bd8-de61-4379-8dc6-a4a62a3790df.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendcloud/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/user/comment/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/user/comment/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/controller/user/account/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/controller/user/account/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/controller/user/post/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/controller/user/post/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/pojo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/user/account/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/service/impl/user/account/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/test/java/com/kob/backend/BackendApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/test/java/com/kob/backend/BackendApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/dynamic/DynamicView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/dynamic/DynamicView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/index/IndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/index/IndexView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +70,7 @@
     &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;7fa281a6f2a36a69523d66ad63091b68&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -90,7 +96,54 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BotRunningSystemApplication">
+  <component name="RunManager" selected="Spring Boot.BackendApplication">
+    <configuration name="BackendApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kob.backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kob.backend" />
+      <option name="MAIN_CLASS_NAME" value="com.kob.backend.BackendApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BackendApplicationTests.redisTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kob.backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kob.backend" />
+      <option name="MAIN_CLASS_NAME" value="com.kob.backend.BackendApplicationTests" />
+      <option name="METHOD_NAME" value="redisTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisTemplateTests.redisTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kob.backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kob.backend" />
+      <option name="MAIN_CLASS_NAME" value="com.kob.backend.RedisTemplateTests" />
+      <option name="METHOD_NAME" value="redisTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" />
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-1.8" />
@@ -134,6 +187,9 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.BackendApplicationTests" />
+      <item itemvalue="JUnit.BackendApplicationTests.redisTest" />
+      <item itemvalue="JUnit.RedisTemplateTests.redisTest" />
       <item itemvalue="Spring Boot.BackendApplication" />
       <item itemvalue="Spring Boot.MatchSystemApplication" />
       <item itemvalue="Spring Boot.BotRunningSystemApplication" />
@@ -142,6 +198,9 @@
       <list>
         <item itemvalue="Spring Boot.BotRunningSystemApplication" />
         <item itemvalue="Spring Boot.MatchSystemApplication" />
+        <item itemvalue="JUnit.RedisTemplateTests.redisTest" />
+        <item itemvalue="JUnit.BackendApplicationTests" />
+        <item itemvalue="JUnit.BackendApplicationTests.redisTest" />
       </list>
     </recent_temporary>
   </component>
@@ -195,6 +254,8 @@
       <workItem from="1667985461331" duration="5224000" />
       <workItem from="1668043248506" duration="9240000" />
       <workItem from="1668135971507" duration="1450000" />
+      <workItem from="1668220186754" duration="10505000" />
+      <workItem from="1668330938376" duration="13379000" />
     </task>
     <servers />
   </component>

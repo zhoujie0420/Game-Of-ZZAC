@@ -1114,7 +1114,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>id</UnderlyingIndexName>
     </key>
     <column id="319" parent="304" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>48</AutoIncrement>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1170,7 +1170,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>id</UnderlyingIndexName>
     </key>
     <column id="331" parent="305" name="id">
-      <AutoIncrement>91</AutoIncrement>
+      <AutoIncrement>93</AutoIncrement>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1225,7 +1225,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>id</UnderlyingIndexName>
     </key>
     <column id="342" parent="306" name="id">
-      <AutoIncrement>112</AutoIncrement>
+      <AutoIncrement>120</AutoIncrement>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1296,8 +1296,8 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <DataType>varchar(100)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="359" parent="307" name="photo">
-      <DataType>varchar(1000)|0s</DataType>
+    <column id="359" parent="307" name="email">
+      <DataType>varchar(255)|0s</DataType>
       <Position>4</Position>
     </column>
     <column id="360" parent="307" name="rating">
@@ -1305,22 +1305,26 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <DefaultExpression>1500</DefaultExpression>
       <Position>5</Position>
     </column>
-    <index id="361" parent="307" name="PRIMARY">
+    <column id="361" parent="307" name="photo">
+      <DataType>varchar(1000)|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <index id="362" parent="307" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="362" parent="307" name="id">
+    <index id="363" parent="307" name="id">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="363" parent="307" name="PRIMARY">
+    <key id="364" parent="307" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="364" parent="307" name="id">
+    <key id="365" parent="307" name="id">
       <UnderlyingIndexName>id</UnderlyingIndexName>
     </key>
   </database-model>
