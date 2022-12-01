@@ -6,9 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="2d6914e8-9e02-4475-9159-70e0f577ad93" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/config/WebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/config/WebSocketConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/controller/user/account/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/java/com/kob/backend/controller/user/account/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendcloud/backend/src/main/resources/templates/pk/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backendcloud/backend/src/main/resources/templates/pk/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/MatchGround.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/MatchGround.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/user/UserProfileInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/user/UserProfileInfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/user/UserProfilePosts.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/user/UserProfilePosts.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/user/UserProfileWrite.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/user/UserProfileWrite.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/store/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/store/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/dynamic/DynamicView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/dynamic/DynamicView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/pk/PkIndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/pk/PkIndexView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/ranklist/RanklistIndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/ranklist/RanklistIndexView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/record/RecordIndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/record/RecordIndexView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/user/account/UserAccountLoginView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/user/account/UserAccountLoginView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/user/account/UserAccountRegisterView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/user/account/UserAccountRegisterView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/user/account/temp1.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/user/myspace/BotView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/user/myspace/BotView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/user/myspace/PostView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/user/myspace/PostView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,6 +272,13 @@
       <workItem from="1668786690454" duration="1210000" />
       <workItem from="1668849877288" duration="2590000" />
       <workItem from="1668860449461" duration="27000" />
+      <workItem from="1668916444819" duration="26000" />
+      <workItem from="1668998473353" duration="1311000" />
+      <workItem from="1669290082529" duration="631000" />
+      <workItem from="1669292651514" duration="940000" />
+      <workItem from="1669339000644" duration="1594000" />
+      <workItem from="1669719661200" duration="599000" />
+      <workItem from="1669812185061" duration="1585000" />
     </task>
     <servers />
   </component>

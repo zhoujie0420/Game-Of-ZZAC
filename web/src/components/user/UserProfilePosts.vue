@@ -110,7 +110,7 @@
   
       const delete_a_post = () => {
         $.ajax({
-          url: "http://127.0.0.1:3000/api/user/post/remove",
+          url: "https://zzac.online/api/user/post/remove",
           type: "post",
           data: {
             id: delete_post_id.value,

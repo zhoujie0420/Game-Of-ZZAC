@@ -18,6 +18,11 @@ public class AccountController {
     @Autowired
     private RedisUtil redisUtil;
 
+    @RequestMapping("test")
+    public String test(){
+        return "Test";
+    }
+
     @PostMapping("token") //账号密码获取token
     public Map<String,String> getToken(@RequestParam Map<String,String> map){
         String username =map.get("username");

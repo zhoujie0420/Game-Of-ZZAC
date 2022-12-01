@@ -80,7 +80,7 @@ export default {
         const pull_page = page => {
             current_page = page;
             $.ajax({
-                url: "http://127.0.0.1:3000/api/ranklist/getlist/",
+                url: "https://zzac.online/api/ranklist/getlist/",
                 data: {
                     page,
                 },

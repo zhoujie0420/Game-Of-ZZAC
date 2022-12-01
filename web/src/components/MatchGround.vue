@@ -73,7 +73,7 @@
   
           const refresh_bots = () => {
               $.ajax({
-                  url: "http://127.0.0.1:3000/api/user/bot/getlist/",
+                  url: "https://zzac.online/api/user/bot/getlist/",
                   type: "get",
                   headers: {
                       'Authorization': "Bearer " + store.state.user.token,
