@@ -20,7 +20,7 @@ export default {
     const posts = reactive({});
     const refreshPost = () => {
       $.ajax({
-        url: "https://zzac.online/api/user/post/getlistbyid",
+        url: "http://127.0.0.1:3000/api/user/post/getlistbyid",
         type: "post",
         data: {
           id: store.state.user.id,

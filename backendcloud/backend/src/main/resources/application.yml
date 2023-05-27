@@ -3,9 +3,9 @@ server:
   port: 3000
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/kob?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://sh-cynosdbmysql-grp-38086q0k.sql.tencentcdb.com:26809/zhoujTest?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
     username: root
-    password: 123456
+    password: 12345Cbb4zs
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   mail:

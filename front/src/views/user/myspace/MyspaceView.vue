@@ -98,7 +98,7 @@ export default {
 
     const delete_a_post = (id) => {
         $.ajax({
-          url: "https://zzac.online/api/user/post/remove",
+          url: "http://127.0.0.1:3000/api/user/post/remove",
           type: "post",
           data: {
             id: id,
@@ -116,7 +116,7 @@ export default {
 
     const refreshPost = () => {
       $.ajax({
-        url: "https://zzac.online/api/user/post/getlistbyid",
+        url: "http://127.0.0.1:3000/api/user/post/getlistbyid",
         type: "post",
         data: {
           id: store.state.user.id,
@@ -140,7 +140,7 @@ export default {
 
      
         $.ajax({
-          url: "https://zzac.online/api/user/post/add",
+          url: "http://127.0.0.1:3000/api/user/post/add",
           type: "post",
           data: {
             content: content.value,

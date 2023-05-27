@@ -7,8 +7,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class GameService {
-
-
     public String sankeStart(Integer aId, Integer aBotId, Integer bId, Integer bBotId) {
         System.out.println("start gameL: " + aId + " " + bId);
         WebSocketServer.startGame(aId, aBotId, bId, bBotId);

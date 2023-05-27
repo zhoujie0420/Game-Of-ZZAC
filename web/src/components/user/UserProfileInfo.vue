@@ -108,7 +108,7 @@
       const update_avatar = () => {
 
         $.ajax({
-          url: "https://zzac.online/api/user/account/photo",
+          url: "http://127.0.0.1:3000/api/user/account/photo",
           type: "post",
           data: {
             photo: avatar_url.value,
