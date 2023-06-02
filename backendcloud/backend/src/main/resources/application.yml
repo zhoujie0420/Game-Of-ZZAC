@@ -2,11 +2,18 @@
 server:
   port: 3000
 spring:
+  #rabbitmq配置
+  rabbitmq:
+    username: guest
+    password: guest
+    addresses: 127.0.0.1:5672
   datasource:
     url: jdbc:mysql://sh-cynosdbmysql-grp-38086q0k.sql.tencentcdb.com:26809/zhoujTest?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
     username: root
     password: 12345Cbb4zs
     driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      max-lifetime: 120000
 
   mail:
   #    protocol: smtps  ??163 ? smtps  qq?smtp
