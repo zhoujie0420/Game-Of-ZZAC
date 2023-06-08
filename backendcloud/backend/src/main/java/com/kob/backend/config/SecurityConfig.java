@@ -46,7 +46,22 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         "/api/user/account/register/","/api/user/post/getlist/",
                         "/api/user/comment/getlist/").permitAll()
                 .antMatchers("/pk/game/snake/start","/pk/game/snake/receiveBot").hasIpAddress("127.0.0.1")   // 增加此行、
-
+                .antMatchers(
+                        HttpMethod.GET,
+                        "/*.html",
+                        "/**/*.html",
+                        "/**/*.css",
+                        "/**/*.js"
+                ).permitAll()
+                .antMatchers("/profile/**").anonymous()
+                .antMatchers("/common/download**").anonymous()
+                .antMatchers("/common/download/resource**").anonymous()
+                .antMatchers("/swagger-ui.html").anonymous()
+                .antMatchers("/swagger-resources/**").anonymous()
+                .antMatchers("/webjars/**").anonymous()
+                .antMatchers("/*/api-docs").anonymous()
+                .antMatchers("/druid/**").anonymous()
+                .antMatchers("/druid/**").anonymous()
                 .antMatchers(HttpMethod.OPTIONS).permitAll()
                 .anyRequest().authenticated();
 
