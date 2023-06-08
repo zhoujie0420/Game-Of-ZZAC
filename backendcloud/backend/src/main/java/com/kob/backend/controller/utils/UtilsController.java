@@ -22,4 +22,5 @@ public class UtilsController {
         String email = map.get("email");
         return utilsService.sendEmail(email);
     }
+
 }

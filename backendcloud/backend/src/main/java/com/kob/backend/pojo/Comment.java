@@ -20,17 +20,20 @@ import java.util.List;
 public class Comment {
     @TableId(type = IdType.AUTO)
     private Integer id;
-    private Integer foreignId;
+    private Integer postId;
     private Integer userId;
-    private String username;
+    @TableField(exist = false)
+    private Integer username;
     private String content;
-    private Integer pid;
-    private String target;
+    private Integer commentId;
+    private Integer targetUserid;
+    @TableField(exist = false)
+    private String targetUsername;
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "Asia/Shanghai")
     private Date createtime;
 
 
     @TableField(exist = false) //表示数据库中不存在
-    private List<Comment> ChildrenComment;
+    private List<Comment> childrenComment;
 
 }

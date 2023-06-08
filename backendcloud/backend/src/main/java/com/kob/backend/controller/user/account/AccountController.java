@@ -1,11 +1,16 @@
 package com.kob.backend.controller.user.account;
 
+import com.kob.backend.pojo.User;
 import com.kob.backend.service.impl.user.account.AccountService;
 import com.kob.backend.service.impl.utils.UtilsService;
+import com.kob.backend.utils.rabbitmq.Consumer;
+import com.kob.backend.utils.rabbitmq.Producer;
 import com.kob.backend.utils.redis.RedisUtil;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
 import java.util.Map;
 
 @RestController
@@ -17,10 +22,15 @@ public class AccountController {
     private final AccountService accountService;
     @Autowired
     private RedisUtil redisUtil;
+    @Resource
+    Producer producer;
 
     @RequestMapping("test")
-    public String test(){
-        return "Test";
+    public String test() throws InterruptedException {
+        User user = new User(1,"1","1","1","s",1);
+        producer.produce(user);
+        Thread.sleep(1000);
+        return "success";
     }
 
     @PostMapping("token") //账号密码获取token

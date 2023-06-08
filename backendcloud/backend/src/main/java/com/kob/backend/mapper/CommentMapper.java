@@ -1,9 +1,9 @@
 package com.kob.backend.mapper;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.github.yulichang.base.MPJBaseMapper;
 import com.kob.backend.pojo.Comment;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
-public interface CommentMapper extends BaseMapper<Comment> {
+public interface CommentMapper extends MPJBaseMapper<Comment> {
 }

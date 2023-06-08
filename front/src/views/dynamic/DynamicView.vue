@@ -80,7 +80,7 @@ export default {
     const add_comment = (id) => {
       error_message.value = "";
       $.ajax({
-        url: "https://zzac.online/api/user/comment/add/",
+        url: "http://127.0.0.1:3000/api/user/comment/add/",
         type: "post",
         data: {
           foreignId: id,
@@ -108,7 +108,7 @@ export default {
 
     const allPosts = () => {
       $.ajax({
-        url: "https://zzac.online/api/user/post/getlist/",
+        url: "http://127.0.0.1:3000/api/user/post/getlist/",
         type: "post",
         success(resp) {
           postlist.value = resp;
@@ -135,7 +135,7 @@ export default {
 
     const remove_comment = (id) => {
       $.ajax({
-        url: "https://zzac.online/api/user/comment/remove/",
+        url: "http://127.0.0.1:3000/api/user/comment/remove/",
         type: "post",
         data: {
           id: id,

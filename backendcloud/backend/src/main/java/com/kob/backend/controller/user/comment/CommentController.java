@@ -21,8 +21,12 @@ public class CommentController {
 
     @PostMapping("add")
     public Map<String,String> add(@RequestParam Map<String,String> data){
-        System.out.println(data);
         return commentService.add(data);
+    }
+
+    @PostMapping("addChild")
+    public Map<String, String> addChild(@RequestParam Map<String ,String> data){
+        return commentService.addChild(data);
     }
 
     @PostMapping("remove")

@@ -47,7 +47,7 @@ export default {
     actions: {
         login(context, data) {
             $.ajax({
-                url: "https://zzac.online/api/user/account/token/",
+                url: "http://127.0.0.1:3000/api/user/account/token/",
                 type: "post",
                 data: {
                     username: data.username,
@@ -70,7 +70,7 @@ export default {
         
         emaillogin(context, data) {
             $.ajax({
-              url: "https://zzac.online/api/user/account/emailtoken/",
+              url: "http://127.0.0.1:3000/api/user/account/emailtoken/",
               type: "post",
               data: {
                 email: data.email,
@@ -93,7 +93,7 @@ export default {
           },
         getinfo(context, data) {
             $.ajax({
-                url: "https://zzac.online/api/user/account/info/",
+                url: "http://127.0.0.1:3000/api/user/account/info/",
                 type: "get",
                 headers: {
                     Authorization: "Bearer " + context.state.token,

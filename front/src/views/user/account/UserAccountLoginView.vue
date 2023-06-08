@@ -115,7 +115,7 @@ export default {
       console.log(email.value)
       $.ajax({
         
-          url: "https://zzac.online/api/utils/email/",
+          url: "http://127.0.0.1:3000/api/utils/email/",
           type: "get",
           data: {
               email: email.value,
