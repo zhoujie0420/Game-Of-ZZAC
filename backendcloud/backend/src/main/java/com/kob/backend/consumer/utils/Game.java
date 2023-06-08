@@ -209,6 +209,7 @@ public class Game extends Thread {
                 loser,
                 new Date()
         );
+        WebSocketServer.rabbitTemplate.convertAndSend("queue",record.toString());
         WebSocketServer.recordMapper.insert(record);
     }
 

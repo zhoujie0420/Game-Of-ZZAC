@@ -9,6 +9,7 @@ import com.kob.backend.mapper.UserMapper;
 import com.kob.backend.pojo.Bot;
 import com.kob.backend.pojo.User;
 
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.LinkedMultiValueMap;
@@ -49,11 +50,16 @@ public class WebSocketServer {
 
     public static UserMapper userMapper;
     public static RecordMapper recordMapper;
+    public static RabbitTemplate rabbitTemplate;
 
 
     @Autowired
     public void setBotMapper(BotMapper botMapper) {
         WebSocketServer.botMapper = botMapper;
+    }
+    @Autowired
+    public void setRabbitTemplate(RabbitTemplate rabbitTemplate) {
+        WebSocketServer.rabbitTemplate = rabbitTemplate;
     }
     @Autowired
     public void setRestTemplate(RestTemplate restTemplate){

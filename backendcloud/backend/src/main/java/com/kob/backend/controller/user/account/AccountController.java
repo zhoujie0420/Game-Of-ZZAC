@@ -22,16 +22,16 @@ public class AccountController {
     private final AccountService accountService;
     @Autowired
     private RedisUtil redisUtil;
-    @Resource
-    Producer producer;
+//    @Resource
+//    Producer producer;
 
-    @RequestMapping("test")
-    public String test() throws InterruptedException {
-        User user = new User(1,"1","1","1","s",1);
-        producer.produce(user);
-        Thread.sleep(1000);
-        return "success";
-    }
+//    @RequestMapping("test")
+//    public String test() throws InterruptedException {
+//        User user = new User(1,"1","1","1","s",1);
+//        producer.produce(user);
+//        Thread.sleep(1000);
+//        return "success";
+//    }
 
     @PostMapping("token") //账号密码获取token
     public Map<String,String> getToken(@RequestParam Map<String,String> map){
