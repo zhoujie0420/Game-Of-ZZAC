@@ -5,8 +5,6 @@ import com.kob.backend.mapper.PostMapper;
 import com.kob.backend.pojo.Post;
 import com.kob.backend.pojo.User;
 import com.kob.backend.utils.UserUtil;
-
-import javafx.geometry.Pos;
 import lombok.AllArgsConstructor;
 
 import org.springframework.stereotype.Service;
