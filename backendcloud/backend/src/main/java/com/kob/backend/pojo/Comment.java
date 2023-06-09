@@ -5,35 +5,44 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
-
 import java.util.Date;
-import java.util.List;
 
+/**
+ * @author dell
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Comment {
     @TableId(type = IdType.AUTO)
     private Integer id;
+
+    @ApiModelProperty("帖子id")
     private Integer postId;
+
+    @ApiModelProperty("评论本人id")
     private Integer userId;
+
     @TableField(exist = false)
-    private Integer username;
+    @ApiModelProperty("评论本人姓名")
+    private String username;
+
+    @ApiModelProperty("评论内容")
     private String content;
-    private Integer commentId;
+
+    @ApiModelProperty("评论对象Id")
     private Integer targetUserid;
+
     @TableField(exist = false)
+    @ApiModelProperty("评论对象姓名")
     private String targetUsername;
+
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "Asia/Shanghai")
     private Date createtime;
-
-
-    @TableField(exist = false) //表示数据库中不存在
-    private List<Comment> childrenComment;
 
 }

@@ -9,12 +9,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 
+
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/user/bot")
 public class BotController {
 
     private BotService botService;
+
     @PostMapping("add")
     public Map<String, String> add(@RequestParam Map<String, String> data) {
         return botService.add(data);
@@ -22,9 +24,10 @@ public class BotController {
 
     @PostMapping("remove")
     public Map<String, String> remove(@RequestParam Map<String, String> data) {
-        System.out.println(" data"+data);
+        System.out.println(" data" + data);
         return botService.remove(data);
     }
+
     @PostMapping("update")
     public Map<String, String> update(@RequestParam Map<String, String> data) {
         return botService.update(data);

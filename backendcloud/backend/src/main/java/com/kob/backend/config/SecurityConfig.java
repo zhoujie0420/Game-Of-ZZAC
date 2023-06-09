@@ -16,7 +16,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 
-
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -41,11 +40,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 // 放行这两个接口
-                .antMatchers("/api/user/account/test/","/api/utils/email/",
-                        "/api/user/account/emailtoken/","/api/user/account/token/",
-                        "/api/user/account/register/","/api/user/post/getlist/",
-                        "/api/user/comment/getlist/").permitAll()
-                .antMatchers("/pk/game/snake/start","/pk/game/snake/receiveBot").hasIpAddress("127.0.0.1")   // 增加此行、
+                .antMatchers("/api/user/account/test/", "/api/utils/email/",
+                        "/api/user/account/emailtoken/", "/api/user/account/token/",
+                        "/api/user/account/register/", "/api/user/post/getlist/",
+                        "/api/user/comment/getComment/").permitAll()
+                .antMatchers("/pk/game/snake/start", "/pk/game/snake/receiveBot").hasIpAddress("127.0.0.1")   // 增加此行、
                 .antMatchers(
                         HttpMethod.GET,
                         "/*.html",
