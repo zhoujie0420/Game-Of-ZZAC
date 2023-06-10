@@ -144,6 +144,21 @@
             <artifactId>spring-boot-starter-amqp</artifactId>
         </dependency>
 
+
+        <!-- OSS SDK 相关依赖 -->
+        <dependency>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
+            <version>3.10.2</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.6.1</version>
+        </dependency>
+
     </dependencies>
 
     <build>

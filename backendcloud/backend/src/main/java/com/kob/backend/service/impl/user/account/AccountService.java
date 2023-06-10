@@ -4,7 +4,6 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.kob.backend.mapper.UserMapper;
 import com.kob.backend.pojo.User;
 import com.kob.backend.service.impl.utils.UserDetailsImpl;
-import com.kob.backend.service.impl.utils.UtilsService;
 import com.kob.backend.utils.JwtUtil;
 import com.kob.backend.utils.RegularUtil;
 import com.kob.backend.utils.UserUtil;
@@ -15,6 +14,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,28 +30,28 @@ public class AccountService {
     private final PasswordEncoder passwordEncoder;
     private final RedisUtil redisUtil;
 
-    public Map<String,String>  photo(String photo) {  //修改用户信息
+    public Map<String, String> photo(String photo) {  //修改用户信息
 
         Map<String, String> map = new HashMap<>();
         User user = UserUtil.getUser();
 
-        if (!RegularUtil.isAvatarUrl(photo)) {
-            map.put("error_message","图片路径错误, 请检查~");
-            return map;
-        }
+//        if (!RegularUtil.isAvatarUrl(photo)) {
+//            map.put("error_message","图片路径错误, 请检查~");
+//            return map;
+//        }
         user.setPhoto(photo);
         QueryWrapper<User> query = new QueryWrapper<>();
         query.eq("id", user.getId());
         userMapper.update(user, query);
         map.put("error_message", "success");
-        return  map;
+        return map;
     }
 
-    public Map<String,String> getEmailToken(String email ,String code){ //邮箱登录
-        Map<String,String> map = new HashMap<>();
-        if(!redisUtil.hasKey(email)){
+    public Map<String, String> getEmailToken(String email, String code) { //邮箱登录
+        Map<String, String> map = new HashMap<>();
+        if (!redisUtil.hasKey(email)) {
             System.out.println("不存在这个email");
-            map.put("error_message","邮箱错误");
+            map.put("error_message", "邮箱错误");
             return map;
         }
 
@@ -61,8 +61,8 @@ public class AccountService {
         String getcode = String.valueOf(redisUtil.get(email));
         System.out.println(getcode);
         System.out.println(code);
-        if(!Objects.equals(code, getcode)){
-            map.put("error_message","验证码错误");
+        if (!Objects.equals(code, getcode)) {
+            map.put("error_message", "验证码错误");
             return map;
         }
 
@@ -77,23 +77,23 @@ public class AccountService {
         //生成jwt (通过id)
         String jwt = JwtUtil.createJWT(user.getId().toString());
 
-        map.put("error_message" ,"success");
-        map.put("token",jwt);
+        map.put("error_message", "success");
+        map.put("token", jwt);
         return map;
     }
 
     public Map<String, String> getToken(String username, String password) {  //登录
         UsernamePasswordAuthenticationToken authenticationToken =
-                new UsernamePasswordAuthenticationToken(username,password);
+                new UsernamePasswordAuthenticationToken(username, password);
 
         Authentication authenticate = authenticationManager.authenticate(authenticationToken); //登录失败会自己处理
-        UserDetailsImpl loginUser =  (UserDetailsImpl) authenticate.getPrincipal();
-        User user =loginUser.getUser(); // 取出user
+        UserDetailsImpl loginUser = (UserDetailsImpl) authenticate.getPrincipal();
+        User user = loginUser.getUser(); // 取出user
         String jwt = JwtUtil.createJWT(user.getId().toString());
 
-        Map<String,String> map = new HashMap<>();
-        map.put("error_message" ,"success");
-        map.put("token",jwt);
+        Map<String, String> map = new HashMap<>();
+        map.put("error_message", "success");
+        map.put("token", jwt);
 
         return map;
 
@@ -106,13 +106,13 @@ public class AccountService {
         Map<String, String> map = new HashMap<>();
         map.put("error_message", "success");
         map.put("id", user.getId().toString());
-        map.put("email",user.getEmail());
+        map.put("email", user.getEmail());
         map.put("username", user.getUsername());
         map.put("photo", user.getPhoto());
         return map;
     }
 
-    public Map<String, String> register(String username, String password, String confirmedPassword ,String email) {  //注册
+    public Map<String, String> register(String username, String password, String confirmedPassword, String email) {  //注册
         Map<String, String> map = new HashMap<>();
 
         if (username == null) {
@@ -152,8 +152,8 @@ public class AccountService {
         }
 
 
-        if(!RegularUtil.isEmail(email)){
-            map.put("error_message","邮箱地址错误，重新填写");
+        if (!RegularUtil.isEmail(email)) {
+            map.put("error_message", "邮箱地址错误，重新填写");
             return map;
         }
 
@@ -176,16 +176,12 @@ public class AccountService {
 
         String encodePassword = passwordEncoder.encode(password);
         String photo = "https://cdn.acwing.com/media/user/profile/photo/175167_lg_2151948c45.jpg";
-        User user = new User(null, username, encodePassword, email,photo, 1500);
+        User user = new User(null, username, encodePassword, email, photo, 1500);
         userMapper.insert(user);
 
         map.put("error_message", "success");
         return map;
     }
-
-
-
-
 
 
 }

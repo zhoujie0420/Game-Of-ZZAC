@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 @RestController
 public class GetRanklistController {
@@ -30,7 +31,7 @@ public class GetRanklistController {
 
         Integer page = Integer.parseInt(data.get("page"));
         JSONObject res = getRanklistService.getList(page);
-        stringRedisTemplate.opsForValue().set("cache_rank_list", String.valueOf(res));
+        stringRedisTemplate.opsForValue().set("cache_rank_list", String.valueOf(res), 20, TimeUnit.SECONDS);
         return res;
     }
 }
