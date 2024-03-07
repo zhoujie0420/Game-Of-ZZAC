@@ -54,9 +54,9 @@ export default {
                     password: data.password,
                 },
                 success(resp) {
-                    if (resp.error_message === "success") {
-                        localStorage.setItem("jwt_token", resp.token);
-                        context.commit("updateToken", resp.token);
+                    if (resp.code === 200) {
+                        localStorage.setItem("jwt_token", resp.data.token);
+                        context.commit("updateToken", resp.data.token);
                         data.success(resp);
                     } else {
                         data.error(resp);
@@ -99,9 +99,9 @@ export default {
                     Authorization: "Bearer " + context.state.token,
                 },
                 success(resp) {
-                    if (resp.error_message === "success") {
+                    if (resp.code === 200) {
                         context.commit("updateUser", {
-                            ...resp,
+                            ...resp.data,
                             is_login: true,
                         });
                         data.success(resp);

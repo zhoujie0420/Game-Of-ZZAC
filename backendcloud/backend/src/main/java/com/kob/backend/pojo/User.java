@@ -14,7 +14,11 @@ public class User {
     private Integer id;
     private String username;
     private String password;
-    private String email;
-    private String photo;
-    private Integer rating;
+    private Integer age;
+    private String phone;
+    /**
+     * 身份 医生 2 患者 1
+     */
+    private Integer role;
+    private Integer roleId;
 }

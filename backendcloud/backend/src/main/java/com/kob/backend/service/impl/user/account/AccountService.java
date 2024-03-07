@@ -30,23 +30,6 @@ public class AccountService {
     private final PasswordEncoder passwordEncoder;
     private final RedisUtil redisUtil;
 
-    public Map<String, String> photo(String photo) {  //修改用户信息
-
-        Map<String, String> map = new HashMap<>();
-        User user = UserUtil.getUser();
-
-//        if (!RegularUtil.isAvatarUrl(photo)) {
-//            map.put("error_message","图片路径错误, 请检查~");
-//            return map;
-//        }
-        user.setPhoto(photo);
-        QueryWrapper<User> query = new QueryWrapper<>();
-        query.eq("id", user.getId());
-        userMapper.update(user, query);
-        map.put("error_message", "success");
-        return map;
-    }
-
     public Map<String, String> getEmailToken(String email, String code) { //邮箱登录
         Map<String, String> map = new HashMap<>();
         if (!redisUtil.hasKey(email)) {
@@ -54,8 +37,6 @@ public class AccountService {
             map.put("error_message", "邮箱错误");
             return map;
         }
-
-
         // 强制转化object会报  java.lang.Integer cannot be cast to java.lang.String 错误
         // String.valueOf 实质调用 object.toString() 方法
         String getcode = String.valueOf(redisUtil.get(email));
@@ -94,7 +75,6 @@ public class AccountService {
         Map<String, String> map = new HashMap<>();
         map.put("error_message", "success");
         map.put("token", jwt);
-
         return map;
 
     }
@@ -102,13 +82,10 @@ public class AccountService {
 
     public Map<String, String> getinfo() {  //获取用户信息
         User user = UserUtil.getUser();
-
         Map<String, String> map = new HashMap<>();
         map.put("error_message", "success");
         map.put("id", user.getId().toString());
-        map.put("email", user.getEmail());
         map.put("username", user.getUsername());
-        map.put("photo", user.getPhoto());
         return map;
     }
 
