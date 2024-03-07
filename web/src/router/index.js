@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import RanklistIndexView from '../views/RanklistIndexView.vue'
 import NotFound from '../views/error/NotFound'
 import UserAccountLoginView from '../views/UserAccountLoginView.vue'
 import UserAccountRegisterView from '../views/UserAccountRegisterView.vue'
@@ -66,14 +65,6 @@ const routes = [
         component: BotView
       },
     ],
-    meta: {
-      requestAuth: true,
-    }
-  },
-  {
-    path: "/ranklist/",
-    name: "ranklist_index",
-    component: RanklistIndexView,
     meta: {
       requestAuth: true,
     }
