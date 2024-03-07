@@ -1,17 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import PkIndexView from '../views/PkIndexView.vue'
-import RecordIndexView from '../views/record/RecordIndexView'
-import RecordContentView from '../views/record/RecordContentView'
 import RanklistIndexView from '../views/RanklistIndexView.vue'
 import NotFound from '../views/error/NotFound'
 import UserAccountLoginView from '../views/UserAccountLoginView.vue'
 import UserAccountRegisterView from '../views/UserAccountRegisterView.vue'
 import IndexView from '../views/IndexView.vue'
 import store from '../store/index'
-import DynamicView from '../views/dynamic/DynamicView'
 import MyspaceView from '../views/user/myspace/MyspaceView'
 import PostView from '../views/user/myspace/PostView'
 import BotView from '../views/user/myspace/BotView'
+import ConsultationRecordView from "@/views/ConsultationRecordView.vue";
+import ReserveRecordView from "@/views/ReserveRecordView.vue";
+import SigningRecordView from "@/views/SigningRecordView.vue";
 
 const routes = [
   {
@@ -23,36 +22,27 @@ const routes = [
     }
   },
   {
-    path: "/pk/",
-    name: "pk_index",
-    component: PkIndexView,
+    path: "/consultations/",
+    name: "consultations_index",
+    component: ConsultationRecordView,
     meta: {
       requestAuth: true,
     }
   },
   {
-    path: "/record/",
-    name: "record_index",
-    component: RecordIndexView,
-    meta: {
-      requestAuth: true,
-    }
-  },
-  
-  {
-    path: "/record/:recordId/",
-    name: "record_content",
-    component: RecordContentView,
+    path: "/reserve/",
+    name: "reserve_index",
+    component: ReserveRecordView,
     meta: {
       requestAuth: true,
     }
   },
   {
-    path: "/dynamics/",
-    name: "dynamics_index",
-    component: DynamicView,
+    path: "/signing/",
+    name: "signing_index",
+    component: SigningRecordView,
     meta: {
-      requestAuth: false,
+      requestAuth: true,
     }
   },
   {

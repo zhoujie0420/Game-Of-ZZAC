@@ -6,9 +6,10 @@ export default {
         username: "",
         photo: "",
         token: "",
-        email: "1 ",
+        email: "",
         is_login: false,
         pulling_info: true,  // 是否正在从云端拉取信息
+        role: "",
     },
     getters: {
     },
@@ -27,6 +28,7 @@ export default {
             state.photo = user.photo;
             state.is_login = user.is_login;
             state.rating = user.rating;
+            state.role = user.role;
         },
         updateToken(state, token) {
             state.token = token;
@@ -39,6 +41,7 @@ export default {
             state.photo = "";
             state.token = "";
             state.is_login = false;
+            state.role = "";
         },
         updatePullingInfo(state, pulling_info) {
             state.pulling_info = pulling_info;
@@ -67,31 +70,8 @@ export default {
                 }
             });
         },
-        
-        emaillogin(context, data) {
-            $.ajax({
-              url: "http://127.0.0.1:3000/api/user/account/emailtoken/",
-              type: "post",
-              data: {
-                email: data.email,
-                code: data.code,
-              },
-              success(resp) {
-                if (resp.error_message === "success") {
-                    localStorage.setItem("jwt_token", resp.token);
-                    context.commit("updateToken", resp.token);
-                    data.success(resp);
-                } else {
-                    data.error(resp);
-                }
-              },
-              error(resp) {
-                data.error(resp);
-            }
-            });
-            
-          },
-        getinfo(context, data) {
+
+        getInfo(context, data) {
             $.ajax({
                 url: "http://127.0.0.1:3000/api/user/account/info/",
                 type: "get",

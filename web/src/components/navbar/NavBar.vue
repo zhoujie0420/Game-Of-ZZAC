@@ -5,20 +5,19 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <router-link :class="route_name == 'pk_index' ? 'nav-link active' : 'nav-link'" :to="{name: 'pk_index'}">签约</router-link>
+            <router-link :class="route_name === 'signing_index' ? 'nav-link active' : 'nav-link'" :to="{name: 'signing_index'}">签约</router-link>
           </li>
           <li class="nav-item">
-            <router-link :class="route_name == 'record_index' ? 'nav-link active' : 'nav-link'" :to="{name: 'record_index'}">医疗记录</router-link>
+            <router-link :class="route_name === 'consultations_index' ? 'nav-link active' : 'nav-link'" :to="{name: 'consultations_index'}">医疗记录</router-link>
           </li>
           <li class="nav-item">
-            <router-link :class="route_name == 'dynamics_index' ? 'nav-link active' : 'nav-link'" :to="{name: 'dynamics_index'}">预约挂号</router-link>
+            <router-link :class="route_name === 'reserve_index' ? 'nav-link active' : 'nav-link'" :to="{name: 'reserve_index'}">预约挂号</router-link>
           </li>
-
         </ul>
         <ul class="navbar-nav" v-if="$store.state.user.is_login">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              {{ $store.state.user.username }}
+              {{ $store.state.user.username }} / {{ $store.state.user.role === 1 ? '患者' : '医生'}}
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li>
