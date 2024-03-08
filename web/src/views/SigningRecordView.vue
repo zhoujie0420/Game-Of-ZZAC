@@ -98,7 +98,6 @@ function getSigns() {
     },
     success(resp) {
       if (resp.code === 200) {
-        console.log(resp.data);
         signRecords.value = resp.data; // 更新userInfos的值
       } else {
         console.log(resp.message);

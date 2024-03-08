@@ -56,8 +56,6 @@ function upload(id,doctorId,e) {
       "Authorization": "Bearer " + store.state.user.token,
     },
     success(resp) {
-      console.log("record =====" + id);
-      console.log(resp);
       updateDocUrl(id,doctorId, resp);
     }
   })
@@ -98,7 +96,6 @@ function getSigns() {
     },
     success(resp) {
       if (resp.code === 200) {
-        console.log(resp.data);
         signRecords.value = resp.data; // 更新userInfos的值
       } else {
         console.log(resp.message);
